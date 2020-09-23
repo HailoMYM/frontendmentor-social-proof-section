@@ -349,7 +349,7 @@ body {
 
 .layout-reviews {
   grid-area: reviews;
-  padding: 24px;
+  padding: 0 24px;
   display: grid;
   grid-template: repeat(3, auto)/auto;
   row-gap: 16px; }
@@ -377,7 +377,8 @@ body {
   @media only screen and (min-width: 769px) {
     .heading {
       text-align: left;
-      max-width: 500px; }
+      max-width: 500px;
+      padding: 24px; }
       .heading__title {
         font-size: 4.8rem;
         margin-bottom: 16px; } }
@@ -408,7 +409,8 @@ body {
       align-items: center; }
       .rating__star {
         margin-bottom: 0;
-        flex: 1 0 120px; }
+        flex: 1 0 120px;
+        min-width: 135px; }
       .rating__text {
         text-align: left;
         margin-bottom: 0;
@@ -422,7 +424,7 @@ body {
   width: 100%;
   text-align: left;
   background-color: #502050;
-  padding: 40px 32px 32px;
+  padding: 40px 32px;
   border-radius: 8px;
   font-size: 1.3rem;
   line-height: 1.5rem; }
@@ -451,7 +453,8 @@ body {
     color: white; }
   @media only screen and (min-width: 769px) {
     .review {
-      min-height: 235px; }
+      min-height: 235px;
+      max-height: 90%; }
       .review:first-child {
         align-self: start; }
       .review:last-child {
@@ -466,7 +469,9 @@ body {
   @media only screen and (min-width: 769px) {
     .background-wrapper {
       height: 100vh;
-      background-image: url("../images/bg-pattern-top-desktop.svg"), url("../images/bg-pattern-bottom-desktop.svg"); } }
+      background-image: url("../images/bg-pattern-top-desktop.svg"), url("../images/bg-pattern-bottom-desktop.svg");
+      max-width: 1440px;
+      margin: auto; } }
 
 .home-wrapper {
   display: grid;
@@ -476,7 +481,10 @@ body {
   @media only screen and (min-width: 769px) {
     .home-wrapper {
       height: 80%;
-      grid-template: repeat(2, 1fr)/repeat(2, 1fr);
+      grid-template-rows: 10fr 12fr;
+      grid-template-columns: repeat(2, auto);
       grid-template-areas: "heading ratings" "reviews reviews";
       max-width: 1200px;
-      margin: auto; } }
+      margin: auto;
+      row-gap: 72px;
+      column-gap: 72px; } }

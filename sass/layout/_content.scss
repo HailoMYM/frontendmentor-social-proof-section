@@ -1,6 +1,5 @@
 .layout-heading {
   grid-area: heading;
-
   @media only screen and (min-width: $width-desktop) {
   }
 }
@@ -21,7 +20,7 @@
 
 .layout-reviews {
   grid-area: reviews;
-  padding: 24px;
+  padding: 0 24px;
   display: grid;
   grid-template: repeat(3, auto) / auto;
   row-gap: 16px;

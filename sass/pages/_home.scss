@@ -14,6 +14,8 @@
     height: 100vh;
     background-image: image("bg-pattern-top-desktop.svg"),
       image("bg-pattern-bottom-desktop.svg");
+    max-width: 1440px;
+    margin: auto;
   }
 }
 
@@ -29,12 +31,16 @@
 
   @media only screen and (min-width: $width-desktop) {
     height: 80%;
-    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    grid-template-rows: 10fr 12fr;
+    grid-template-columns: repeat(2, auto);
 
     grid-template-areas:
       "heading ratings"
       "reviews reviews";
+
     max-width: 1200px;
     margin: auto;
+    row-gap: 72px;
+    column-gap: 72px;
   }
 }

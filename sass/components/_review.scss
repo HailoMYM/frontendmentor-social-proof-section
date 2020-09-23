@@ -2,7 +2,7 @@
   width: 100%;
   text-align: left;
   background-color: $dark-magenta;
-  padding: 40px 32px 32px;
+  padding: 40px 32px;
   border-radius: 8px;
   font-size: 1.3rem;
   line-height: 1.5rem;
@@ -41,6 +41,7 @@
 
   @media only screen and (min-width: $width-desktop) {
     min-height: 235px;
+    max-height: 90%;
     &:first-child {
       align-self: start;
     }
