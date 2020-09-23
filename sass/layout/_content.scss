@@ -1,0 +1,35 @@
+.layout-heading {
+  grid-area: heading;
+
+  @media only screen and (min-width: $width-desktop) {
+  }
+}
+
+.layout-ratings {
+  grid-area: ratings;
+  padding: 24px;
+  display: grid;
+  grid-template: repeat(3, auto) / 1fr;
+  row-gap: 16px;
+
+  @media only screen and (min-width: $width-desktop) {
+    grid-template: repeat(3, 56px) / 1fr;
+    justify-items: center;
+    align-content: center;
+  }
+}
+
+.layout-reviews {
+  grid-area: reviews;
+  padding: 24px;
+  display: grid;
+  grid-template: repeat(3, auto) / auto;
+  row-gap: 16px;
+
+  @media only screen and (min-width: $width-desktop) {
+    grid-template: auto / repeat(3, auto);
+    column-gap: 30px;
+
+    align-items: center;
+  }
+}

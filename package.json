@@ -1,8 +1,7 @@
 {
-  "name": "huddle-landing-page",
+  "name": "scss-boilerplate",
   "version": "1.0.0",
-  "description": "My first frontend mentor challenge: https://www.frontendmentor.io/challenges/huddle-landing-page-with-curved-sections-5ca5ecd01e82137ec91a50f2",
-  "main": "index.js",
+  "description": "",
   "scripts": {
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
     "devserver": "live-server",
@@ -12,8 +11,6 @@
     "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
     "build:css": "npm-run-all compile:sass prefix:css compress:css"
   },
-  "author": "Justin Punzalan <iam@justpunz.com>",
-  "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^7.1.4",
     "concat": "^1.0.3",

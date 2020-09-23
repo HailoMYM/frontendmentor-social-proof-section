@@ -1,3 +1,40 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
+
+.background-wrapper {
+  background-image: image("bg-pattern-top-mobile.svg"),
+    image("bg-pattern-bottom-mobile.svg");
+  background-position: left top, right bottom;
+  background-repeat: no-repeat, no-repeat;
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (min-width: $width-desktop) {
+    height: 100vh;
+    background-image: image("bg-pattern-top-desktop.svg"),
+      image("bg-pattern-bottom-desktop.svg");
+  }
+}
+
+.home-wrapper {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  grid-template-columns: 100%;
+
+  grid-template-areas:
+    "heading"
+    "ratings"
+    "reviews";
+
+  @media only screen and (min-width: $width-desktop) {
+    height: 80%;
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+
+    grid-template-areas:
+      "heading ratings"
+      "reviews reviews";
+    max-width: 1200px;
+    margin: auto;
+  }
+}

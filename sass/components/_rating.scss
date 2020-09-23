@@ -1,0 +1,48 @@
+.rating {
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  background-color: $light-grayish-magenta;
+  padding: 16px;
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__star {
+    font-size: 2rem;
+    line-height: 1;
+    color: $yellow-star;
+  }
+  &__text {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: $dark-magenta;
+  }
+
+  @media only screen and (min-width: $width-desktop) {
+    width: 82.5%;
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+
+    &__star {
+      margin-bottom: 0;
+      flex: 1 0 120px;
+    }
+
+    &__text {
+      text-align: left;
+      margin-bottom: 0;
+      flex: 1 1 auto;
+    }
+
+    &:first-child {
+      justify-self: start;
+    }
+    &:last-child {
+      justify-self: end;
+    }
+  }
+}

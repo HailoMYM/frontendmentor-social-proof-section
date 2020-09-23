@@ -1,0 +1,51 @@
+.review {
+  width: 100%;
+  text-align: left;
+  background-color: $dark-magenta;
+  padding: 40px 32px 32px;
+  border-radius: 8px;
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+
+  &__author {
+    margin-bottom: 26px;
+    display: grid;
+    grid-template: repeat(2, auto) / 40px auto;
+    grid-template-areas:
+      "img name"
+      "img type";
+
+    align-items: center;
+    column-gap: 24px;
+  }
+  &__author-img {
+    grid-area: img;
+    width: 40px;
+    border-radius: 20px;
+  }
+  &__author-name {
+    grid-area: name;
+    font-weight: 700;
+    color: $white;
+  }
+  &__author-type {
+    grid-area: type;
+    font-weight: 400;
+    color: $soft-pink;
+  }
+  &__comment {
+    font-weight: 500;
+    line-height: 2.2rem;
+    color: $white;
+  }
+
+  @media only screen and (min-width: $width-desktop) {
+    min-height: 235px;
+    &:first-child {
+      align-self: start;
+    }
+    &:last-child {
+      align-self: end;
+    }
+  }
+}
